@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="./style/main.css">
+    <link rel="stylesheet" href="./style/catalog.css">
+    <title>Project</title>
+</head>
+<body>
+    <div class="registration-menu" id="registration-menu">
+        <div class="black-background"></div>
+        <div class="reg-form">
+            <input type="text" placeholder="login">
+            <br>
+            <input type="text" placeholder="password">
+            <br>
+            <button>Зарегистрироваться</button>
+        </div>
+    </div>
+    <header id="header">
+        <div class="top">
+            <div class="login_panel">
+                <button class="register" id="open-reg-menu">Зарегистрироваться</button>
+                <button class="login">Войти</button>
+            </div>
+        </div>
+        <div class="middle">
+            <div class="logo">
+                <span class="top_layer">My Logo</span> 
+                <span>My Logo</span>  
+            </div>
+            <div class="search">
+                <input type="text" class="search_field" placeholder="Поиск">
+                <button class="search_button">Искать</button>
+            </div>
+            <div class="info">
+                <div class="days">Понедельник-суббота</div>
+                <div class="time">8:00-22:00</div>
+                <div class="phone">8-029-555-55-55</div>
+                <div class="phone">8-044-888-88-88</div>
+            </div>
+        </div>
+        <div class="bottom">
+            <nav class="navigation">
+                <ul>
+                    <li id="catalogBtn">Каталог</li>
+                    <li>Главная</li>
+                    <li>О компании</li>
+                    <li>FAQ</li>
+                    <li>Блог</li>
+                </ul>
+            </nav>
+            <div class="basket-container">
+                <div class="basket">Корзина</div>
+                <div class="basket-count">0</div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="general_container" id="home_page">
+        <div class="catalog_menu_container" id="catalogMenu">
+            <ul class="catalog_menu">
+                <li><a>Одежда</a></li>
+                <li><a>Обувь</a></li>
+                <li><a>Снаряжение</a></li>
+                <li><a>Аксессуары</a></li>
+                <li><a>Ножи</a></li>
+                <li><a>Палатки</a></li>
+                <li><a>Фонари</a></li>
+                <li><a>Посуда</a></li>
+            </ul>
+        </div>
+        <div class="slider_show_container">
+            <div class="slides fade">
+                <img src="./img/slider1.jpg">
+                <div class="slider_text">ПОКОРЯЙ ВЕРШИНЫ</div>
+            </div>
+            <div class="slides fade">
+                <img src="./img/slider2.jpg">
+                <div class="slider_text">ПУТЕШЕСТВУЙ</div>
+            </div>
+            <div class="slides fade">
+                <img src="./img/slider3.jpg">
+                <div class="slider_text">РАСШИРЯЙ ГРАНИЦЫ</div>
+            </div>
+            <a class="prev" onclick="flipSlide(-1)">&#10094</a>
+            <a class="next" onclick="flipSlide(1)">&#10095</a>
+            <div class="dots">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+        </div>
+        <div class="achieves">
+            <div class="achieve">
+                <span>Доставка по всей стране</span>    
+                <p>Логистика сети нашего магазина позволяет доставить товары в любую точку страны в течении трех дней</p>
+            </div>
+            <div class="achieve">
+                <span>Лидер продаж 2019</span>    
+                <p>Наш магазин является самым крупным поставщиком спортивного снаряжения в Беларуси</p>
+            </div>
+            <div class="achieve">
+                <span>Лучшие товары</span>    
+                <p>В ассортиенте наших магазинов товары такий компаний как Petzl, Alpine Equipment, Black Diamond, La Sportiva, Mad Rock и другие</p>
+                </div>
+            <div class="achieve">
+                <span>Удобное мобильное приложение</span>    
+                <p>Наше мобильное приложение в Google Play и AppStore набрало 4.9 из 5 баллов</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container-product" id="catalogContainer">
+        <div id="menuContainer"></div>
+        <div class="products" id="productsContainer">
+
+        </div>
+    </section>
+    <script src="./js/cardStore.js"></script>
+    <script src="./js/slider.js"></script>
+    <script src="./js/db.js"></script>
+    <script src="./js/catalog.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>

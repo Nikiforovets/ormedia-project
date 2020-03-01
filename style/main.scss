@@ -1,0 +1,354 @@
+$main_color: #D4F870;
+$second_color: #7A45D6;
+$third_color: black;
+$fourth_color: white;
+
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin:0px;
+}
+
+button{
+  cursor: pointer;
+}
+
+// Header begin
+
+header{
+  background-color: $main_color;
+  .top{
+    display: inline;
+    text-align: right;
+    .login_panel{
+      background-color: $fourth_color;
+      .login{
+        padding-right: 40px;
+      }
+    }
+    button{
+      font-size: 16px;
+      font-weight: bold;
+      border: none;
+      color: $second_color;
+      background-color: $fourth_color;
+      padding: 10px 15px;
+      margin: 0px;
+      cursor: pointer;
+    }
+  }
+  .middle{
+    display: flex;
+    
+    .logo{
+      width: 250px;
+      height: 90px;
+      color: $fourth_color;
+      font-style: oblique ; 
+      margin: 25px 55px;
+      text-align: center;
+      font-size: 60px;
+    }
+
+    .logo .top_layer {
+      position: absolute;
+      top: 60px;
+      left: 73px;
+      color: $second_color;
+    }
+
+    .search{
+      flex-grow: 3;
+      margin: 21px 50px 21px 50px;
+      display: flex;
+
+      .search_field{
+        flex-grow: 2;
+        font-size: 20px;
+        padding: 10px;
+        min-width: 400px;
+        max-height: 24px;
+        border: solid 3px $second_color;
+        color: $second_color; 
+        margin: 22px 0px;
+      }
+
+      .search_button{
+        
+        font-size: 20px;
+        height: 50px;
+        margin: 0px;
+        border: none;
+        color: $fourth_color;
+        background-color: $second_color;
+        margin-top: 22px;
+        padding: 1px 10px;
+      }
+    }
+    .info{
+      font-size: 20px;
+      font-weight: bold;
+      color: $third_color;
+      margin: 20px 50px;
+      padding: 0px;
+      
+    }
+  }
+
+  .bottom{
+    display: flex;
+    background-color: $second_color;
+    justify-content: space-between;
+    .navigation{
+      ul{
+        margin: 0px;
+        display: flex;
+        li{
+          list-style-type: none;
+          padding: 19px 40px 15px 20px;
+          font-size: 22px;
+          font-weight: bold;
+          color: $fourth_color;
+          cursor: pointer;
+        }
+      }
+    }
+
+  }
+  .bottom::before{
+    content: "";
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    background-color: $fourth_color;
+  }
+  .basket-container{
+    display: flex;
+    .basket{
+      color: $fourth_color;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0px;
+      margin: 19px 20px 15px 20px;
+      cursor: pointer;
+    }
+    .basket-count{
+      color: $fourth_color;
+      font-size: 20px;
+      font-weight: bold;
+      padding: 0px;
+      margin: 19px 40px 15px 5px;
+    }
+  }
+}
+
+// Header end
+
+//Main page begin
+
+.general_container{
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+
+  .slider_show_container{
+    max-width: 1000px;
+    max-height: 350px;
+    position: relative;
+    //margin: 0 0px;
+
+    .prev, .next{
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: $fourth_color;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+    }
+    .next{
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    .prev:hover, .next:hover{
+      background-color: $second_color;
+    }
+
+    .slider_text{
+      color: $fourth_color;
+      font-size: 50px;
+      font-weight: bold;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+      margin: 10px 20px;
+    }
+
+    .dots{
+      margin-bottom: 15px;
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+    }
+
+    .dot{
+      cursor: pointer;
+      height: 13px;
+      width: 13px;
+      margin: 0 2px;
+      background-color: $fourth_color;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6 ease;
+    }
+
+    .active, .dot:hover{
+      background-color: $second_color;
+    }
+
+    .fade{
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+
+    @-webkit-keyframes fade{
+      from{
+        opacity: 0.4;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+    @keyframes fade{
+      from{
+        opacity: 0.4;
+      }
+      to{
+        opacity: 1;
+      }
+    }
+  }
+
+  .achieves{
+    margin-left: 10px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 250px);
+    .achieve{
+      min-width: 250px;
+      background-color: $main_color;
+      max-width: 280px;
+      color: $second_color;
+      padding: 15px;
+      margin-bottom: 10px;
+      margin-right: 6px;
+      
+      span{
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        padding: 0px 15px;
+      }
+      p{
+        font-size: 20px;
+        color: $third_color;
+        padding: 5px;
+      }
+    }
+  }
+}
+
+//Main page end
+
+//Catalog
+
+.container-product{
+  display: flex;
+  margin-top: 6px;
+}
+
+.products{
+  //width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+
+.products .item{
+  width: 200px;
+  font-size: 18px;
+  //height: 100px;
+  background-color: white;
+  text-align: center;
+  margin: 20px;
+}
+
+.products .item .img{
+  margin-top: 10px;
+  width: 100%;
+  height: 220px;
+  background-repeat: no-repeat;
+}
+
+.products .item .btn{
+  margin-top: 10px;
+  border: none;
+  color: $fourth_color;
+  background-color: $second_color;
+  padding: 10px 15px;
+}
+
+.catalog_menu_container{
+  height: auto;
+  margin-right: 10px;
+  ul.catalog_menu{
+    margin: 0px;
+    padding: 0px;
+    li{
+      list-style-type: none;
+      color: $fourth_color;
+      background-color: $second_color;
+      padding: 16px 80px 16px 60px;
+      margin-bottom: 2px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  }
+}
+
+// registration menu
+.registration-menu{
+  display: none;
+  .black-background{
+    position: fixed;
+    background-color: black;
+    opacity: 80%;
+    z-index: 9999;
+    height: 100%;
+    width: 100%;
+  }
+  .reg-form{
+    background-color: $main_color;
+    position: fixed;
+    z-index: 9999;
+    right: 45%;
+    bottom: 45%;
+    padding: 20px 40px;
+    input, button{
+      padding: 10px 15px;
+      margin-top: 20px;
+      border: $second_color solid 2px;
+    }
+    button{
+      color: $fourth_color;
+      background-color: $second_color;
+    }
+  }
+}
