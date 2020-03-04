@@ -1,3 +1,5 @@
+const displays = ["homePage", "catalogContainer", "aboutCompany", "faq", "blogPage", "basketPage"];
+
 const catalogProduct = [
     {
         id:'prod1',

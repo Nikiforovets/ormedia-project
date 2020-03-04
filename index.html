@@ -51,79 +51,99 @@
         <div class="bottom">
             <nav class="navigation">
                 <ul>
-                    <li id="catalogBtn">Каталог</li>
-                    <li>Главная</li>
-                    <li>О компании</li>
-                    <li>FAQ</li>
-                    <li>Блог</li>
+                    <li id="catalogContainerBtn">Каталог</li>
+                    <li id="homePageBtn">Главная</li>
+                    <li id="aboutCompanyBtn">О компании</li>
+                    <li id="faqBtn">FAQ</li>
+                    <li id="blogPageBtn">Блог</li>
                 </ul>
             </nav>
             <div class="basket-container">
-                <div class="basket">Корзина</div>
+                <div class="basketPageBtn" id="basketPageBtn">Корзина</div>
                 <div class="basket-count">0</div>
             </div>
         </div>
     </header>
     
-    <section class="general_container" id="home_page">
-        <div class="catalog_menu_container" id="catalogMenu">
-            <ul class="catalog_menu">
-                <li><a>Одежда</a></li>
-                <li><a>Обувь</a></li>
-                <li><a>Снаряжение</a></li>
-                <li><a>Аксессуары</a></li>
-                <li><a>Ножи</a></li>
-                <li><a>Палатки</a></li>
-                <li><a>Фонари</a></li>
-                <li><a>Посуда</a></li>
+    <div class="mainContainer" id="mainContainer">
+        <div class="catalog_menu_container" id="catalogMenuPanel">
+            <ul class="catalog_menu" id="catalogMenu">
+                <li id="clothes"><a>Одежда</a></li>
+                <li id="shoes"><a>Обувь</a></li>
+                <li id="equipment"><a>Снаряжение</a></li>
+                <li id="accessory"><a>Аксессуары</a></li>
+                <li id="knife"><a>Ножи</a></li>
+                <li id="tent"><a>Палатки</a></li>
+                <li id=""><a>Фонари</a></li>
+                <li id=""><a>Посуда</a></li>
             </ul>
         </div>
-        <div class="slider_show_container">
-            <div class="slides fade">
-                <img src="./img/slider1.jpg">
-                <div class="slider_text">ПОКОРЯЙ ВЕРШИНЫ</div>
-            </div>
-            <div class="slides fade">
-                <img src="./img/slider2.jpg">
-                <div class="slider_text">ПУТЕШЕСТВУЙ</div>
-            </div>
-            <div class="slides fade">
-                <img src="./img/slider3.jpg">
-                <div class="slider_text">РАСШИРЯЙ ГРАНИЦЫ</div>
-            </div>
-            <a class="prev" onclick="flipSlide(-1)">&#10094</a>
-            <a class="next" onclick="flipSlide(1)">&#10095</a>
-            <div class="dots">
-                <span class="dot" onclick="currentSlide(1)"></span>
-                <span class="dot" onclick="currentSlide(2)"></span>
-                <span class="dot" onclick="currentSlide(3)"></span>
-            </div>
-        </div>
-        <div class="achieves">
-            <div class="achieve">
-                <span>Доставка по всей стране</span>    
-                <p>Логистика сети нашего магазина позволяет доставить товары в любую точку страны в течении трех дней</p>
-            </div>
-            <div class="achieve">
-                <span>Лидер продаж 2019</span>    
-                <p>Наш магазин является самым крупным поставщиком спортивного снаряжения в Беларуси</p>
-            </div>
-            <div class="achieve">
-                <span>Лучшие товары</span>    
-                <p>В ассортиенте наших магазинов товары такий компаний как Petzl, Alpine Equipment, Black Diamond, La Sportiva, Mad Rock и другие</p>
-                </div>
-            <div class="achieve">
-                <span>Удобное мобильное приложение</span>    
-                <p>Наше мобильное приложение в Google Play и AppStore набрало 4.9 из 5 баллов</p>
-            </div>
-        </div>
-    </section>
 
-    <section class="container-product" id="catalogContainer">
-        <div id="menuContainer"></div>
-        <div class="products" id="productsContainer">
-        </div>
-    </section>
+        <section class="general_container" id="homePage">
+            
+            <div class="slider_show_container">
+                <div class="slides fade">
+                    <img src="./img/slider1.jpg">
+                    <div class="slider_text">ПОКОРЯЙ ВЕРШИНЫ</div>
+                </div>
+                <div class="slides fade">
+                    <img src="./img/slider2.jpg">
+                    <div class="slider_text">ПУТЕШЕСТВУЙ</div>
+                </div>
+                <div class="slides fade">
+                    <img src="./img/slider3.jpg">
+                    <div class="slider_text">РАСШИРЯЙ ГРАНИЦЫ</div>
+                </div>
+                <a class="prev" onclick="flipSlide(-1)">&#10094</a>
+                <a class="next" onclick="flipSlide(1)">&#10095</a>
+                <div class="dots">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+            <div class="achieves">
+                <div class="achieve">
+                    <span>Доставка по всей стране</span>    
+                    <p>Логистика сети нашего магазина позволяет доставить товары в любую точку страны в течении трех дней</p>
+                </div>
+                <div class="achieve">
+                    <span>Лидер продаж 2019</span>    
+                    <p>Наш магазин является самым крупным поставщиком спортивного снаряжения в Беларуси</p>
+                </div>
+                <div class="achieve">
+                    <span>Лучшие товары</span>    
+                    <p>В ассортиенте наших магазинов товары такий компаний как Petzl, Alpine Equipment, Black Diamond, La Sportiva, Mad Rock и другие</p>
+                    </div>
+                <div class="achieve">
+                    <span>Удобное мобильное приложение</span>    
+                    <p>Наше мобильное приложение в Google Play и AppStore набрало 4.9 из 5 баллов</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container-product" id="catalogContainer">
+            <div id="menuContainer"></div>
+            <div class="products" id="productsContainer">
+            </div>
+        </section>
+
+        <section class="aboutCompany" id="aboutCompany">
+            about
+        </section>
+
+        <section class="faq" id="faq">
+            faq
+        </section>
+
+        <section class="blogPage" id="blogPage">
+            blog
+        </section>
+        <section class="basketPage" id="basketPage">
+            basket
+        </section>
+
+    </div>
     <script src="./js/cardStore.js"></script>
     <script src="./js/login.js"></script>
     <script src="./js/slider.js"></script>

@@ -65,7 +65,6 @@ function logout(){
 function checkAutorization(){
     users.forEach((element)=>{
         if(element.autorize == true){
-            console.log("qwerty");
             document.getElementById("user").innerHTML = element.username;
             document.getElementById("user_panel").style.display = "block";
             document.getElementById("login_panel").style.display = "none";

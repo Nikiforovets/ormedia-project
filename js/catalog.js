@@ -1,8 +1,9 @@
 class AllProducts{
-    constructor(containerProducts, catalogCounter, catalogProduct){
+    constructor(containerProducts, catalogCounter, catalogProduct, elementId){
         this.containerProducts = document.querySelector(containerProducts);
         this.catalogCounter = document.querySelector(catalogCounter);
         this.catalogProduct = catalogProduct;
+        this.elementId = elementId;
         this.createProduct();
     }
 
@@ -12,7 +13,6 @@ class AllProducts{
         let products = cardStore.getProduct();
         this.catalogCounter.innerHTML = products.length;
         for(let i=0; i<this.catalogProduct.length; i++){
-
             let index = products.indexOf(this.catalogProduct[i].id);
             let activeText;
             if(index === -1){
@@ -59,11 +59,13 @@ class AllProducts{
                 refreshCount();
             });
 
-            item.appendChild(name);
-            item.appendChild(img);
-            item.appendChild(price);
-            item.appendChild(button);
-            wraper.appendChild(item);
+            if(this.elementId == "catalogContainerBtn" || this.elementId == this.catalogProduct[i].type){
+                item.appendChild(name);
+                item.appendChild(img);
+                item.appendChild(price);
+                item.appendChild(button);
+                wraper.appendChild(item);
+            }
         }
 
         this.containerProducts.appendChild(wraper);

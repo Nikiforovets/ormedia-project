@@ -13,6 +13,10 @@ button{
 }
 
 // Header begin
+.mainContainer{
+  display: flex;
+  margin-top: 6px;
+}
 
 header{
   background-color: $main_color;
@@ -130,7 +134,7 @@ header{
   }
   .basket-container{
     display: flex;
-    .basket{
+    .basketPageBtn{
       color: $fourth_color;
       font-size: 20px;
       font-weight: bold;
@@ -153,7 +157,6 @@ header{
 //Main page begin
 
 .general_container{
-  margin-top: 6px;
   display: flex;
   flex-wrap: wrap;
 
@@ -278,7 +281,6 @@ header{
 
 .container-product{
   display: flex;
-  margin-top: 6px;
 }
 
 .products{

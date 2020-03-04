@@ -7,6 +7,13 @@ button {
   cursor: pointer;
 }
 
+.mainContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 6px;
+}
+
 header {
   background-color: #D4F870;
 }
@@ -149,7 +156,7 @@ header .basket-container {
   display: flex;
 }
 
-header .basket-container .basket {
+header .basket-container .basketPageBtn {
   color: white;
   font-size: 20px;
   font-weight: bold;
@@ -167,7 +174,6 @@ header .basket-container .basket-count {
 }
 
 .general_container {
-  margin-top: 6px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,7 +307,6 @@ header .basket-container .basket-count {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 6px;
 }
 
 .products {
