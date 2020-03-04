@@ -85,9 +85,15 @@ const catalogProduct = [
     }
 ]
 
-const users = [
+let users = [
     {
+        autorize: false,
         username:"admin",
+        password:"123"
+    },
+    {
+        autorize: false,
+        username:"user",
         password:"123"
     }
 ]

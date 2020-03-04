@@ -24,6 +24,15 @@ header .top .login_panel .login {
   padding-right: 40px;
 }
 
+header .top .user_panel {
+  display: none;
+  background-color: white;
+}
+
+header .top .user_panel .user {
+  cursor: default;
+}
+
 header .top button {
   font-size: 16px;
   font-weight: bold;

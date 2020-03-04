@@ -14,18 +14,22 @@
     <div class="registration-menu" id="registration-menu">
         <div class="black-background"></div>
         <div class="reg-form">
-            <input type="text" placeholder="login">
+            <input id="username" type="text" placeholder="login">
             <br>
-            <input type="text" placeholder="password">
+            <input id="password" type="text" placeholder="password">
             <br>
-            <button>Зарегистрироваться</button>
+            <button id="registration-btn">Зарегистрироваться</button>
         </div>
     </div>
     <header id="header">
         <div class="top">
-            <div class="login_panel">
+            <div class="login_panel" id="login_panel">
                 <button class="register" id="open-reg-menu">Зарегистрироваться</button>
-                <button class="login">Войти</button>
+                <button class="login" id="open-login-menu">Войти</button>
+            </div>
+            <div class="user_panel" id="user_panel">
+                <button class="user" id="user">qwe</button>
+                <button class="logout" id="logout">Выйти</button>
             </div>
         </div>
         <div class="middle">
@@ -118,10 +122,10 @@
     <section class="container-product" id="catalogContainer">
         <div id="menuContainer"></div>
         <div class="products" id="productsContainer">
-
         </div>
     </section>
     <script src="./js/cardStore.js"></script>
+    <script src="./js/login.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/db.js"></script>
     <script src="./js/catalog.js"></script>
