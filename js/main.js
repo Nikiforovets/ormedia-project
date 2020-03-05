@@ -1,16 +1,42 @@
 hideAllDisplays();
 refreshCount();
 checkAutorization();
+
+addCatalogListeners();
+
+function addCatalogListeners(){
+    document.getElementById("catalogContainerBtn").addEventListener("click", showAllCatalog);
+    document.getElementById("catalogMenu").childNodes.forEach(function(element){
+        element.addEventListener("click", showCategoryCatalog);
+    });
+    document.getElementById("basket").addEventListener("click", showBasketCatalog);
+}
+
+function showAllCatalog(){
+    hideAllDisplays();
+    document.getElementById("catalogContainer").style.display = "block";
+    let allProducts = new AllProducts(".products", ".basket-count", catalogProduct);
+}
+
+function showCategoryCatalog(){
+    hideAllDisplays();
+    document.getElementById("catalogContainer").style.display = "block";
+    let categoryProducts = new CategoryProducts(".products", ".basket-count", catalogProduct, this.id);
+}
+
+function showBasketCatalog(){
+    hideAllDisplays();
+    document.getElementById("catalogContainer").style.display = "block";
+    let basketProducts = new BasketProducts(".products", ".basket-count", catalogProduct);
+}
+
+
+
 document.getElementById("homePage").style.display = "flex";
 
 function refreshCount(){
     document.querySelector(".basket-count").innerHTML=cardStore.getProduct().length;
 }
-
-document.getElementById("catalogContainerBtn").addEventListener("click", showCatalog);
-document.getElementById("catalogMenu").childNodes.forEach(function(element){
-    element.addEventListener("click", showCatalog);
-});
 
 document.getElementById("homePageBtn").addEventListener("click", ()=>{
     hideAllDisplays();
@@ -31,18 +57,6 @@ document.getElementById("blogPageBtn").addEventListener("click", ()=>{
     hideAllDisplays();
     document.getElementById("blogPage").style.display = "block";
 });
-
-document.getElementById("basketPageBtn").addEventListener("click", ()=>{
-    hideAllDisplays();
-    document.getElementById("basketPage").style.display = "block";
-});
-
-function showCatalog(){
-    hideAllDisplays();
-    document.getElementById("catalogContainer").style.display = "block";
-
-    let allProducts = new AllProducts(".products", ".basket-count", catalogProduct, this.id);
-}
 
 //login listeners
 

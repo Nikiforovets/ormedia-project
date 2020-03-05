@@ -1,4 +1,4 @@
-const displays = ["homePage", "catalogContainer", "aboutCompany", "faq", "blogPage", "basketPage"];
+const displays = ["homePage", "catalogContainer", "aboutCompany", "faq", "blogPage"];
 
 const catalogProduct = [
     {

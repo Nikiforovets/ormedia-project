@@ -1,9 +1,8 @@
 class AllProducts{
-    constructor(containerProducts, catalogCounter, catalogProduct, elementId){
+    constructor(containerProducts, catalogCounter, catalogProduct){
         this.containerProducts = document.querySelector(containerProducts);
         this.catalogCounter = document.querySelector(catalogCounter);
         this.catalogProduct = catalogProduct;
-        this.elementId = elementId;
         this.createProduct();
     }
 
@@ -21,26 +20,26 @@ class AllProducts{
                 activeText = "Удалить из корзины";
             }
 
-            let item = this.getProductItem({
+            let item = createProduct.getProductItem({
                 tagName: "div",
                 className: "item"
             });
-            let name = this.getProductItem({
+            let name = createProduct.getProductItem({
                 tagName: "div",
                 className: "name",
                 textName: this.catalogProduct[i].name
             });
-            let img = this.getProductItem({
+            let img = createProduct.getProductItem({
                 tagName: "div",
                 className: "img",
                 backgroundImg: `url(${this.catalogProduct[i].img})`
             });
-            let price = this.getProductItem({
+            let price = createProduct.getProductItem({
                 tagName: "div",
                 className: "price",
                 textName: this.catalogProduct[i].price
             });
-            let button = this.getProductItem({
+            let button = createProduct.getProductItem({
                 tagName: "button",
                 className: "btn",
                 textName: activeText,
@@ -58,34 +57,14 @@ class AllProducts{
                 }
                 refreshCount();
             });
-
-            if(this.elementId == "catalogContainerBtn" || this.elementId == this.catalogProduct[i].type){
-                item.appendChild(name);
-                item.appendChild(img);
-                item.appendChild(price);
-                item.appendChild(button);
-                wraper.appendChild(item);
-            }
+            
+            item.appendChild(name);
+            item.appendChild(img);
+            item.appendChild(price);
+            item.appendChild(button);
+            wraper.appendChild(item);
         }
 
         this.containerProducts.appendChild(wraper);
-    }
-
-
-    getProductItem(card){
-        let element = document.createElement(card.tagName);
-        if("className" in card){
-            element.setAttribute('class', card.className);
-        }
-        if("textName" in card){
-            element.innerHTML = card.textName;
-        }
-        if("backgroundImg" in card){
-            element.style.backgroundImage = card.backgroundImg;
-        }
-        if("id" in card){
-            element.setAttribute('id', card.id);
-        }
-        return element;
     }
 }
