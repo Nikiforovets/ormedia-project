@@ -13,6 +13,9 @@ class CreateProduct{
         if("id" in card){
             element.setAttribute('id', card.id);
         }
+        if("description" in card){
+            element.innerHTML = card.description;
+        }
         return element;
     }
 }

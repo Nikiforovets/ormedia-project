@@ -1,3 +1,4 @@
+let userAutorize = false;
 function login(){
     if(document.getElementById("registration-btn").innerHTML == "Войти"){
         autorize(document.getElementById("username").value, document.getElementById("password").value);
@@ -13,6 +14,7 @@ function autorize(username, password){
         if(username == element.username && password == element.password){
             element.autorize = true;
             flag = true;
+            userAutorize = true;
         }
         else{
             element.autorize = false;
@@ -59,6 +61,7 @@ function logout(){
     users.forEach((element)=>{
         element.autorize = false;
     });
+    userAutorize = false;
     checkAutorization();
 }
 

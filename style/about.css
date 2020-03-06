@@ -1,0 +1,10 @@
+.aboutCompany {
+  width: 100%;
+}
+
+.aboutCompany #map {
+  width: 98%;
+  height: 400px;
+  margin-right: 20px;
+}
+/*# sourceMappingURL=about.css.map */

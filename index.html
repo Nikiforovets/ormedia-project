@@ -7,8 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
-    <link rel="stylesheet" href="./style/catalog.css">
+    <link rel="stylesheet" href="./style/header.css">
+    <link rel="stylesheet" href="./style/about.css">
     <title>Project</title>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript">
+    </script>
 </head>
 <body>
     <div class="registration-menu" id="registration-menu">
@@ -126,10 +129,16 @@
             <div id="menuContainer"></div>
             <div class="products" id="productsContainer">
             </div>
+            <div class="basketSumContainer" id="basketSumContainer">
+                <button id="pay" class="pay">Купить</button>
+                <span>Сумма:</span>
+                <div class="basketSum" id="basketSum"></div>
+            </div>
         </section>
 
         <section class="aboutCompany" id="aboutCompany">
             about
+            <div id="map"></div>
         </section>
 
         <section class="faq" id="faq">
@@ -145,12 +154,12 @@
     <script src="./js/cardStore.js"></script>
     <script src="./js/creatorCardStruct.js"></script>
     <script src="./js/createProduct.js"></script>
-    
     <script src="./js/login.js"></script>
     <script src="./js/slider.js"></script>
     <script src="./js/allProducts.js"></script>
     <script src="./js/categoryProducts.js"></script>
     <script src="./js/basketProducts.js"></script>
     <script src="./js/main.js"></script>
+    <script src="./js/ymap.js"></script>
 </body>
 </html>

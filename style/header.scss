@@ -1,0 +1,148 @@
+$main_color: #D4F870;
+$second_color: #7A45D6;
+$third_color: black;
+$fourth_color: white;
+
+.mainContainer{
+    display: flex;
+    margin-top: 6px;
+  }
+  
+  button{
+    cursor: pointer;
+  }
+  
+  
+  header{
+    background-color: $main_color;
+    .top{
+      display: inline;
+      text-align: right;
+      .login_panel{
+        background-color: $fourth_color;
+        .login{
+          padding-right: 40px;
+        }
+      }
+      .user_panel{
+        display: none;
+        background-color: $fourth_color;
+        .user{
+          cursor: default;
+        }
+      }
+      button{
+        font-size: 16px;
+        font-weight: bold;
+        border: none;
+        color: $second_color;
+        background-color: $fourth_color;
+        padding: 10px 15px;
+        margin: 0px;
+        cursor: pointer;
+      }
+    }
+    .middle{
+      display: flex;
+      
+      .logo{
+        width: 250px;
+        height: 90px;
+        color: $fourth_color;
+        font-style: oblique ; 
+        margin: 25px 55px;
+        text-align: center;
+        font-size: 60px;
+      }
+  
+      .logo .top_layer {
+        position: absolute;
+        top: 60px;
+        left: 73px;
+        color: $second_color;
+      }
+  
+      .search{
+        flex-grow: 3;
+        margin: 21px 50px 21px 50px;
+        display: flex;
+  
+        .search_field{
+          flex-grow: 2;
+          font-size: 20px;
+          padding: 10px;
+          min-width: 400px;
+          max-height: 24px;
+          border: solid 3px $second_color;
+          color: $second_color; 
+          margin: 22px 0px;
+        }
+  
+        .search_button{
+          
+          font-size: 20px;
+          height: 50px;
+          margin: 0px;
+          border: none;
+          color: $fourth_color;
+          background-color: $second_color;
+          margin-top: 22px;
+          padding: 1px 10px;
+        }
+      }
+      .info{
+        font-size: 20px;
+        font-weight: bold;
+        color: $third_color;
+        margin: 20px 50px;
+        padding: 0px;
+        
+      }
+    }
+  
+    .bottom{
+      display: flex;
+      background-color: $second_color;
+      justify-content: space-between;
+      .navigation{
+        ul{
+          margin: 0px;
+          display: flex;
+          li{
+            list-style-type: none;
+            padding: 19px 40px 15px 20px;
+            font-size: 22px;
+            font-weight: bold;
+            color: $fourth_color;
+            cursor: pointer;
+          }
+        }
+      }
+  
+    }
+    .bottom::before{
+      content: "";
+      position: absolute;
+      height: 6px;
+      width: 100%;
+      background-color: $fourth_color;
+    }
+    .basket-container{
+      display: flex;
+      .basketPageBtn{
+        color: $fourth_color;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0px;
+        margin: 19px 20px 15px 20px;
+        cursor: pointer;
+      }
+      .basket-count{
+        color: $fourth_color;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 0px;
+        margin: 19px 40px 15px 5px;
+      }
+    }
+  }

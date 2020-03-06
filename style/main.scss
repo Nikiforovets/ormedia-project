@@ -12,153 +12,11 @@ button{
   cursor: pointer;
 }
 
-// Header begin
-.mainContainer{
-  display: flex;
-  margin-top: 6px;
-}
-
-header{
-  background-color: $main_color;
-  .top{
-    display: inline;
-    text-align: right;
-    .login_panel{
-      background-color: $fourth_color;
-      .login{
-        padding-right: 40px;
-      }
-    }
-    .user_panel{
-      display: none;
-      background-color: $fourth_color;
-      .user{
-        cursor: default;
-      }
-    }
-    button{
-      font-size: 16px;
-      font-weight: bold;
-      border: none;
-      color: $second_color;
-      background-color: $fourth_color;
-      padding: 10px 15px;
-      margin: 0px;
-      cursor: pointer;
-    }
-  }
-  .middle{
-    display: flex;
-    
-    .logo{
-      width: 250px;
-      height: 90px;
-      color: $fourth_color;
-      font-style: oblique ; 
-      margin: 25px 55px;
-      text-align: center;
-      font-size: 60px;
-    }
-
-    .logo .top_layer {
-      position: absolute;
-      top: 60px;
-      left: 73px;
-      color: $second_color;
-    }
-
-    .search{
-      flex-grow: 3;
-      margin: 21px 50px 21px 50px;
-      display: flex;
-
-      .search_field{
-        flex-grow: 2;
-        font-size: 20px;
-        padding: 10px;
-        min-width: 400px;
-        max-height: 24px;
-        border: solid 3px $second_color;
-        color: $second_color; 
-        margin: 22px 0px;
-      }
-
-      .search_button{
-        
-        font-size: 20px;
-        height: 50px;
-        margin: 0px;
-        border: none;
-        color: $fourth_color;
-        background-color: $second_color;
-        margin-top: 22px;
-        padding: 1px 10px;
-      }
-    }
-    .info{
-      font-size: 20px;
-      font-weight: bold;
-      color: $third_color;
-      margin: 20px 50px;
-      padding: 0px;
-      
-    }
-  }
-
-  .bottom{
-    display: flex;
-    background-color: $second_color;
-    justify-content: space-between;
-    .navigation{
-      ul{
-        margin: 0px;
-        display: flex;
-        li{
-          list-style-type: none;
-          padding: 19px 40px 15px 20px;
-          font-size: 22px;
-          font-weight: bold;
-          color: $fourth_color;
-          cursor: pointer;
-        }
-      }
-    }
-
-  }
-  .bottom::before{
-    content: "";
-    position: absolute;
-    height: 6px;
-    width: 100%;
-    background-color: $fourth_color;
-  }
-  .basket-container{
-    display: flex;
-    .basketPageBtn{
-      color: $fourth_color;
-      font-size: 20px;
-      font-weight: bold;
-      padding: 0px;
-      margin: 19px 20px 15px 20px;
-      cursor: pointer;
-    }
-    .basket-count{
-      color: $fourth_color;
-      font-size: 20px;
-      font-weight: bold;
-      padding: 0px;
-      margin: 19px 40px 15px 5px;
-    }
-  }
-}
-
-// Header end
 
 //Main page begin
 
 .general_container{
   display: flex;
-  flex-wrap: wrap;
 
   .slider_show_container{
     max-width: 1000px;
@@ -247,10 +105,11 @@ header{
 
   .achieves{
     margin-left: 10px;
-    width: auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 250px);
+    max-width: 700px;
+    max-height: auto;
+
+    display: flex;
+    flex-wrap: wrap;
     .achieve{
       min-width: 250px;
       background-color: $main_color;
@@ -283,20 +142,72 @@ header{
   display: flex;
 }
 
+.basketSumContainer{
+  width: 100%;
+  background-color: $main_color;
+  padding: 15px 0px;
+  color: $second_color;
+  font-size: 24px;
+  margin-bottom: 10px;
+  .pay{
+    padding: 10px 30px;
+    border: none;
+    background-color: $second_color;
+    color: $fourth_color;
+    margin-left: 2%;
+    font-size: 16px;
+  }
+  span{
+    margin-left: 2%;
+    text-align: right;
+    width: 85%;
+  }
+  .basketSum{
+    margin-left: 3%;
+    margin-right: 3%;
+  }
+}
+
 .products{
-  //width: 100%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap; 
+  .flexInBasket{
+
+    .basketProdCont{
+      width: 200px;
+      
+    }
+    .description{
+      max-width: 50%;
+      margin-top: 0;
+      margin-left: 20px;
+      text-align: left;
+    }
+    .price{
+      margin-left: auto;
+      margin-right: 3%;
+      font-size: 24px;
+      text-align: right;
+      color: $second_color;
+    }
+    .btn{
+      height: 35px;
+      margin-left: 20px;      
+    }
+    display: flex;
+    
+  }
 }
 
 .products .item{
-  width: 200px;
+  min-width: 200px;
   font-size: 18px;
   //height: 100px;
   background-color: white;
   text-align: center;
-  margin: 20px;
+  margin: 15px;
 }
 
 .products .item .img{

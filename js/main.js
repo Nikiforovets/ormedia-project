@@ -7,12 +7,21 @@ addLoginListeners();
 
 //catalog listeners 
 
+let basketProducts;
+
 function addCatalogListeners(){
     document.getElementById("catalogContainerBtn").addEventListener("click", showAllCatalog);
     document.getElementById("catalogMenu").childNodes.forEach(function(element){
         element.addEventListener("click", showCategoryCatalog);
     });
     document.getElementById("basket").addEventListener("click", showBasketCatalog);
+    document.getElementById("pay").addEventListener("click", function(){
+        if(userAutorize){
+            alert("Оплачено");
+        }
+        else
+        alert("Оплата не выполнена, войдите в учетную запись!");
+    });
 }
 
 function showAllCatalog(){
@@ -33,9 +42,10 @@ function showBasketCatalog(){
     hideAllDisplays();
     document.getElementById("catalogContainer").style.display = "block";
     document.getElementById("productsContainer").style.display = "block";
-    let basketProducts = new BasketProducts(".products", ".basket-count", catalogProduct);
+    document.getElementById("basketSumContainer").style.display = "flex";
+    basketProducts = new BasketProducts(".products", ".basket-count", catalogProduct, ".basketSum");
+    basketProducts.calculateSum();
 }
-
 
 //catalog listeners end
 

@@ -37,6 +37,11 @@ class CreatorCardStruct{
             textName: activeText,
             id: catalogProduct[i].id
         });
+        struct.description = createProduct.getProductItem({
+            tagName: "p",
+            className: "description",
+            textName: catalogProduct[i].description
+        })
 
         struct.button.addEventListener('click', function(){
             let id = this.getAttribute('id');
