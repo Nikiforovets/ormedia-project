@@ -1,0 +1,76 @@
+.faq {
+  width: 100%;
+}
+
+.faq .topic {
+  cursor: pointer;
+}
+
+.faq .topic .accordHeader {
+  background-color: #D4F870;
+  color: #7A45D6;
+  padding: 10px 20px;
+  font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 6px;
+}
+
+.faq .topic .accordHeader h1 {
+  margin: 0;
+}
+
+.faq .topic .accordHeader .arrowFaq {
+  margin-right: 30px;
+  margin-left: auto;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.faq .topic p {
+  margin-left: 10px;
+  max-width: 900px;
+  font-size: 18px;
+  display: none;
+}
+
+.faq .active .accordHeader .arrowFaq {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  margin-right: 26px;
+}
+
+.faq .active p {
+  display: block;
+}
+
+.active p {
+  -webkit-animation-name: active;
+  -webkit-animation-duration: .8s;
+  animation-name: active;
+  animation-duration: .8s;
+}
+
+@-webkit-keyframes active {
+  from {
+    opacity: 0.2;
+    -webkit-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes active {
+  from {
+    opacity: 0.2;
+    -webkit-transform: translate(0px, -20px);
+            transform: translate(0px, -20px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=faq.css.map */

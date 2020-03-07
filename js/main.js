@@ -108,10 +108,20 @@ function addLoginListeners(){
 
 //login listeners end
 
-
-
-
-
 function refreshCount(){
     document.querySelector(".basket-count").innerHTML=cardStore.getProduct().length;
 }
+
+
+//faq begin
+
+document.querySelectorAll(".topic").forEach(function(element){
+    element.addEventListener("click",function(){
+        document.querySelectorAll(".topic").forEach(function(e){
+            e.classList.remove("active");
+        });
+        this.classList.toggle("active");
+    });
+});
+
+//faq end

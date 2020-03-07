@@ -1,0 +1,22 @@
+$main_color: #D4F870;
+$second_color: #7A45D6;
+$third_color: black;
+$fourth_color: white;
+
+
+.blogPage{
+    h1{
+        color: $second_color;
+
+    }
+    .block{
+        display: flex;
+        img{
+            height: 320px;
+            margin: 0px 20px;
+        }
+        p{
+            margin: 0px 20px;
+        }
+    }
+}

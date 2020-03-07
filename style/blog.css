@@ -1,0 +1,19 @@
+.blogPage h1 {
+  color: #7A45D6;
+}
+
+.blogPage .block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.blogPage .block img {
+  height: 320px;
+  margin: 0px 20px;
+}
+
+.blogPage .block p {
+  margin: 0px 20px;
+}
+/*# sourceMappingURL=blog.css.map */
