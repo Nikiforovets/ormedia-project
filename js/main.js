@@ -5,6 +5,18 @@ addCatalogListeners();
 addSwitchDisplaysListeners()
 addLoginListeners();
 
+//search
+
+document.querySelector(".search_button").addEventListener("click", function(){
+    let search = new Search(document.querySelector(".search_field").value);
+});
+document.querySelector(".search_field").addEventListener("keydown", function(event){
+    if(event.keyCode == 13){
+        let search = new Search(this.value);
+    }
+});
+
+//chat 
 setTimeout(showChat, 6000);
 function showChat(){
     document.querySelector(".chat-menu").style.transform = "translate(0px, -450px)";
@@ -41,7 +53,7 @@ function sendMessage(){
     }
 }
 
-
+//chat end
 
 //catalog listeners 
 
