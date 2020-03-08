@@ -5,6 +5,44 @@ addCatalogListeners();
 addSwitchDisplaysListeners()
 addLoginListeners();
 
+setTimeout(showChat, 6000);
+function showChat(){
+    document.querySelector(".chat-menu").style.transform = "translate(0px, -450px)";
+}
+
+document.querySelector(".chat-menu").addEventListener("click", function(event){
+    if(event.target.className == "closeBtn"){
+        this.style.transform = "translate(0px, 0px)";
+    }
+    else{
+        if(event.target.className == "sendMessageBtn"){
+            sendMessage();
+        }
+        else
+        this.style.transform = "translate(0px, -450px)";
+    }
+});
+
+document.getElementById("messField").addEventListener("keydown", function(event){
+    if(event.keyCode == 13){
+        sendMessage();
+    }
+});
+
+
+function sendMessage(){
+    let value = document.getElementById("messField").value;
+    if(value !== ""){
+        let message = document.createElement("p");
+        message.innerHTML = value;
+        message.style.marginLeft = "15px";  
+        document.querySelector(".chatField").appendChild(message);
+        document.getElementById("messField").value = "";
+    }
+}
+
+
+
 //catalog listeners 
 
 let basketProducts;
