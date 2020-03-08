@@ -7,7 +7,7 @@ body{
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin:0px;
   .chat-menu{
-    border: $second_color solid 2px;
+    border: $second_color solid 3px;
     .closeBtn{
       border: none;
       width: 24px;
@@ -28,7 +28,6 @@ body{
     background-color: $main_color;
     .chatField{
       background-color: $fourth_color;
-      border: solid 1px $second_color;
       
       width:250px;
       height: 330px;
@@ -325,17 +324,5 @@ button{
     }
   }
 }
-
-  
-  
-  @keyframes chat-show{
-    from{
-      opacity: 0.6; 
-      transform: translate(0px, 50px);
-    }
-    to{
-      opacity: 1;
-    }
-  }
   
 
