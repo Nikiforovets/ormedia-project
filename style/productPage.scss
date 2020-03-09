@@ -1,0 +1,35 @@
+$main_color: #D4F870;
+$second_color: #7A45D6;
+$third_color: black;
+$fourth_color: white;
+
+.productPage{
+    text-align: left;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    .img{
+        //margin-left: auto;
+        margin-right: auto;
+        width: 250px;
+        height: 250px;
+        background-size: 250px;
+        background-repeat: no-repeat;
+    }
+    .name{
+        color: $second_color;
+        font-size: 24px;
+    }
+    .price{
+        color: $second_color;
+        font-size: 24px;
+    }
+    button{
+        padding: 10px;
+        border: none;
+        background-color: $second_color;
+
+        
+        color: $fourth_color;
+    }
+    
+}

@@ -13,7 +13,7 @@ class AllProducts{
         this.catalogCounter.innerHTML = products.length;
         for(let i=0; i<this.catalogProduct.length; i++){
             let cardStruct = creatorCardStruct.createStruct(this.catalogProduct,i);
-                    
+
             cardStruct.item.appendChild(cardStruct.name);
             cardStruct.item.appendChild(cardStruct.img);
             cardStruct.item.appendChild(cardStruct.price);

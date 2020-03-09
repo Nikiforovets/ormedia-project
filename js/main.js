@@ -43,13 +43,12 @@ document.getElementById("messField").addEventListener("keydown", function(event)
     }
 });
 
-
 function sendMessage(){
     let value = document.getElementById("messField").value;
     if(value !== ""){
         let message = document.createElement("p");
         message.innerHTML = value;
-        message.style.marginLeft = "15px";  
+        message.style.marginLeft = "15px";
         document.querySelector(".chatField").appendChild(message);
         document.getElementById("messField").value = "";
     }

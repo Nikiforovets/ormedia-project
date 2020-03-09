@@ -41,7 +41,20 @@ class CreatorCardStruct{
             tagName: "p",
             className: "description",
             textName: catalogProduct[i].description
-        })
+        });
+
+        struct.img.addEventListener("click", function(){
+            hideAllDisplays();
+            let display = document.getElementById("productPage");
+            display.style.display = "block";
+            display.innerHTML = "";
+            struct.item.appendChild(struct.name);
+            struct.item.appendChild(struct.img);
+            struct.item.appendChild(struct.price);
+            struct.item.appendChild(struct.description);
+            struct.item.appendChild(struct.button);
+            display.appendChild(struct.item);
+        });
 
         struct.button.addEventListener('click', function(){
             let id = this.getAttribute('id');

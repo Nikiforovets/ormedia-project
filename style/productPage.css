@@ -1,0 +1,31 @@
+.productPage {
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
+.productPage .img {
+  margin-right: auto;
+  width: 250px;
+  height: 250px;
+  background-size: 250px;
+  background-repeat: no-repeat;
+}
+
+.productPage .name {
+  color: #7A45D6;
+  font-size: 24px;
+}
+
+.productPage .price {
+  color: #7A45D6;
+  font-size: 24px;
+}
+
+.productPage button {
+  padding: 10px;
+  border: none;
+  background-color: #7A45D6;
+  color: white;
+}
+/*# sourceMappingURL=productPage.css.map */
